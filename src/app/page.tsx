@@ -1,6 +1,21 @@
 'use client'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import MyAlert from '../components/ui/my-alert'
 import { FormEvent, useState } from 'react'
+import { Terminal } from 'lucide-react'
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+import { Button } from '@/components/ui/button'
+
 
 
 
@@ -13,9 +28,7 @@ export default function Home() {
 
   function handleSigin(e: FormEvent) {
     e.preventDefault()
-    console.log('clicou aqui')
     return (
-
       handleAlert()
     )
   }
@@ -83,6 +96,7 @@ export default function Home() {
               >
                 Entrar
               </button>
+
             </div>
           </form>
 
@@ -98,8 +112,11 @@ export default function Home() {
         </div>
 
       </div>
+      {alertOpen ?
 
-      {alertOpen ? <MyAlert title='Atenção' description='Login realizado com sucesso!' state={handleAlert} /> : null}
+        <MyAlert title='Atenção' description='Login realizado com sucesso!' state={handleAlert} />
+        : null}
+
     </main>
 
 
