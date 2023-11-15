@@ -1,3 +1,4 @@
+"use client"
 import MyAlert from "@/components/ui/my-alert"
 import { FormEvent, useState } from "react"
 

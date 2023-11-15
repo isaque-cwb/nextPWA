@@ -1,13 +1,10 @@
-'use client'
-import MyAlert from '../components/ui/my-alert'
-import { FormEvent, useState } from 'react'
-import PageHome from './home/page'
+import PageLogin from './login/page'
 
 
 
 
 export default function Page() {
   return (
-    <PageHome />
+    <PageLogin />
   )
 }
